@@ -21,24 +21,20 @@
         <label for="">邮政编码：</label>
         <input type="text" placeholder="请输入手机号">
     </div>
+
     <div class="form-box clearfix">
         <label for="">省份：</label>
-        <select name="" id="" ng-change="choose1(a)" ng-model="a">
-            <option value="{{ $index }}" ng-repeat="pro in data">{{ pro.name }}</option>
-        </select>
+        <select ng-change="choose1(a)" ng-model="a" ng-options="prov.name for prov in data"></select>
     </div>
     <div class="form-box clearfix">
         <label for="">市级：</label>
-        <select name="" id="" ng-change="choose2(b)" ng-model="b">
-            <option value="{{ $index }}" ng-repeat="town in towns">{{ town.name }}</option>
-        </select>
+        <select ng-change="choose2(b)" ng-model="b" ng-options="town.name for town in towns"></select>
     </div>
     <div class="form-box clearfix">
         <label for="">地区：</label>
-        <select name="" id="" ng-change="choose3(c)" ng-model="c">
-            <option value="" ng-repeat="(index,are) in areaName">{{are}}</option>
-        </select>
+        <select ng-change="choose3(c)" ng-model="c" ng-options="area for area in areaName"></select>
     </div>
+    
     <div class="form-box clearfix">
         <label for="">街道地址：</label>
         <input type="text" placeholder="请输入详细地址">

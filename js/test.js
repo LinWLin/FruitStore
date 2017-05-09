@@ -482,32 +482,23 @@ angular.module("app",["ng","ui.bootstrap","ngRoute","ngAnimate","ngSanitize"])
 		$http.get("data/addr_data.json").then(function(response){
 
 			$scope.data = response.data;
-
-			$scope.choose1 = function(a){
-				$scope.towns = response.data[a].city;
-				console.log($scope.towns);
-
-				$scope.choose2 = function(b){
-					$scope.areaName = ($scope.towns)[b].area;
-					console.log($scope.areaName);
-				}
-				
-			}
-			// console.log(response.data[0].city[0].area)
-			// console.log(JSON.stringify(response.data[6]))
-
-		 	/*angular.forEach(response.data,function(province,index){
-		 		var proName = province.name;
-		 		console.log(proName);
-		 		// console.log((province.city)[0].area);
-		 		angular.forEach(province.city,function(town,index){
-		 			console.log(town.name);
-		 			angular.forEach(town.area,function(area,index){
-		 				console.log(area);
-		 			})
-		 		})
-		 	})*/
 		})
+
+
+
+		$scope.choose1 = function(a){
+			$scope.towns = a.city;
+
+			$scope.choose2 = function(b){
+				$scope.areaName = b.area;
+
+				$scope.choose3 = function(c){
+					var address=a.name+","+b.name+","+c;
+					console.log(address);
+				}
+			}
+		}
+
 
 
 	})
