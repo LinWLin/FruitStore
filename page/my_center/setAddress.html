@@ -1,0 +1,67 @@
+<header class="header clearfix">
+	<div class="header-back-btn text-left">
+		<a onClick="javascript:history.back(-1);"></a>
+	</div>
+	<div class="header-text text-center">地址管理</div>
+	<!-- <div class="header-set text-right">
+		<a href="javascript:;">编辑</a>
+	</div> -->
+</header>
+
+<ul class="add-list list-unstyled ng-scope">
+	<li>
+        <div class="clearfix">
+        	<span class="pull-left">汪林</span>
+        	<p class="pull-right">183****7585</p>
+        </div>
+        <div class="addr_txt">浙江省杭州市江干区</div>
+        <div class="addr_txt2">红普路汇禾禧福汇电子商务园4栋513</div>
+        <div class="ico_curr" style="display: block;"></div>
+        <div class="default_addr clearfix">
+            <div class="default pull-left">
+                    <i class="icon-addr">&nbsp;</i>
+                    <span class="red">默认地址</span>
+
+            </div>
+            <div class="operate pull-right clearfix">
+                <div id="edit_addr" class="edit pull-left">
+                	<i class="icon_edit">&nbsp;</i>
+                	<span>编辑</span>
+                </div>
+                <div id="del_addr" class="del pull-right">
+                	<i class="icon_del">&nbsp;</i>
+                	<span>删除</span>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="clearfix">
+        	<span class="pull-left">汪林</span>
+        	<p class="pull-right">183****7585</p>
+        </div>
+        <div class="addr_txt">浙江省杭州市江干区</div>
+        <div class="addr_txt2">红普路汇禾禧福汇电子商务园4栋513</div>
+        <div class="ico_curr" style="display: none;"></div>
+        <div class="default_addr clearfix">
+            <div class="setDefault pull-left">
+                    <i class="icon-addr">&nbsp;</i>
+                    <span>设为默认</span>
+
+            </div>
+            <div class="operate pull-right clearfix">
+                <div id="edit_addr" class="edit pull-left">
+                	<i class="icon_edit">&nbsp;</i>
+                	<span>编辑</span>
+                </div>
+                <div id="del_addr" class="del pull-right">
+                	<i class="icon_del">&nbsp;</i>
+                	<span>删除</span>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+<div class="addressBox ng-scope" ng-click="toAddr()">
+	<span></span> 添加新地址
+</div>

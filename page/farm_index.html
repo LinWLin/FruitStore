@@ -1,0 +1,152 @@
+
+<!-- 提示广告 -->
+<div class="info-Adv">好消息好消息好消</div>
+
+<!-- 农业区分布地图 -->
+<div class="farm-map">
+	<img class="img-responsive" src="img/map_dr_04.png" width="600" border="0" usemap="#planetmap" alt="Planets"/>
+
+		<map name="planetmap" id="planetmap">
+			<!-- <area shape="circle" coords="180,139,14" href ="http://www.baidu.com" target ="_blank" alt="Venus" />
+			<area shape="circle" coords="129,161,10" href ="http://www.baidu.com" target ="_blank" alt="Mercury" /> -->
+			<area shape="rect" coords ng-click="toFarm($event)" alt="Xibei" />
+			<area shape="rect" coords ng-click="toFarm($event)" alt="Dongbei" />
+			<area shape="rect" coords ng-click="toFarm($event)" alt="Huabei" />
+			<area shape="rect" coords ng-click="toFarm($event)" alt="Huazhong" />
+			<area shape="rect" coords ng-click="toFarm($event)" alt="Huadong" />
+			<area shape="rect" coords ng-click="toFarm($event)" alt="Xinan" />
+			<area shape="rect" coords ng-click="toFarm($event)" alt="Huanan" />
+		</map>
+
+</div>
+
+<script>
+
+	$(function(){
+		var imgWith=363;
+		var nowImgWith=$(".farm-map img").width();
+		var multiple=parseFloat(nowImgWith/imgWith).toFixed(2)
+		var fn=function(v1,v2,v3,v4){
+			return parseFloat(v1*multiple).toFixed(2)+","+
+				   parseFloat(v2*multiple).toFixed(2)+","+
+				   parseFloat(v3*multiple).toFixed(2)+","+
+				   parseFloat(v4*multiple).toFixed(2);
+		}
+		$("#planetmap>area:nth-child(1)").attr("coords",fn(90,120,140,150));
+		$("#planetmap>area:nth-child(2)").attr("coords",fn(290,75,335,105));
+		$("#planetmap>area:nth-child(3)").attr("coords",fn(210,105,260,130));
+		$("#planetmap>area:nth-child(4)").attr("coords",fn(208,180,244,205));
+		$("#planetmap>area:nth-child(5)").attr("coords",fn(244,176,280,200));
+		$("#planetmap>area:nth-child(6)").attr("coords",fn(122,184,170,208));
+		$("#planetmap>area:nth-child(7)").attr("coords",fn(200,227,240,250));
+	})
+
+</script>
+
+
+<!-- 菜单按钮 -->
+<section class="section">
+	<div class="container-fluid">
+		<ul class="farm-memu list-unstyled clearfix">
+			<li ng-repeat="menu in menuNames">
+				
+					<div class="{{menu.menuClass}}" ng-bind="menu.menuName" ng-click="toFruit($event,menu.menuName)"></div>
+				
+			</li>
+		</ul>	
+	</div>
+</section>
+
+<!-- 推荐果树 -->
+<section class="section">
+ 	<div class="container-fluid">
+ 		<div class="farm-title">
+ 			<span class="pull-left">我的果树</span>
+ 			<a href="#/all_fruit_tree" class="pull-right">更多</a>
+ 		</div>
+ 		<div class="prd-list">
+ 			<ul class="list-unstyled clearfix">
+ 				<li ng-repeat="list in farmList">
+					<a href="#/fruit_tree_detail">
+						<div class="prd-img">
+							<img class="img-responsive" ng-src="{{list.recomTreeImg}}">
+						</div>
+						<div class="prd-info">
+							<div class="desc">
+								<span class="prd-name" ng-bind="list.recomTreeName"></span>
+								编号
+								<span class="prd-num" ng-bind="list.recomTreeNum"></span>
+							</div>
+							<div class="price">
+								包年价格：<span ng-bind="list.recomTreePrice | currency : '￥'"></span>
+							</div>
+						</div>
+					</a>
+				</li>
+ 			</ul>
+ 		</div>
+ 	</div>
+ </section>
+<!-- 热销水果 -->
+ <section class="section footer-padding">
+ 	<div class="container-fluid">
+ 		<div class="farm-title">
+ 			<span class="pull-left">热销水果</span>
+ 			<a href="#/all_fruit" class="pull-right">更多</a>
+ 		</div>
+ 		<div class="prd-list">
+ 			<ul class="list-unstyled clearfix">
+ 				<li ng-repeat="fruit in fruitList">
+					<a href="#/prd_detail">
+						<div class="prd-img">
+							<img class="img-responsive" ng-src="{{fruit.hotFruitImg}}">
+						</div>
+						<div class="prd-info">
+							<div class="desc">
+								<span class="prd-name" ng-bind="fruit.hotFruitName"></span>
+							</div>
+							<div class="price">
+								亲情价：<span ng-bind="fruit.hotFruitPrice | currency : '￥'"></span>
+							</div>
+						</div>
+					</a>
+				</li>
+ 			</ul>
+ 		</div>
+ 	</div>
+ </section>
+
+<p class="reminder text-center">亲，已经到底了哦</p>
+
+<div style="height: 51px;"></div>
+
+
+<!-- 底部公共导航 -->
+<nav class="footer-nav">
+	<ul class="list-unstyled clearfix">
+		<li class="active">
+			<a href="#/farm_index" title="首页">
+				<div class="nav-icon home"></div>
+				<div class="nav-name">首页</div>
+			</a>
+		</li>
+		<li>
+			<a href="#/my_fruit" title="我的果园">
+				<div class="nav-icon myfruit"></div>
+				<div class="nav-name">我的果园</div>
+			</a>
+		</li>
+		<li>
+			<a href="#/shopping_cart" title="购物车">
+				<div class="nav-icon gwc"></div>
+				<div class="nav-name">购物车</div>
+			</a>
+		</li>
+		<li>
+			<a href="#/my_center" title="个人中心">
+				<div class="nav-icon mycenter"></div>
+				<div class="nav-name">个人中心</div>
+			</a>
+		</li>
+	</ul>
+</nav>

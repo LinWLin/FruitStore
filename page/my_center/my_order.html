@@ -1,0 +1,49 @@
+<header class="header clearfix">
+	<div class="header-back-btn text-left">
+		<a onClick="javascript:history.back(-1);"></a>
+	</div>
+	<div class="header-text text-center">我的订单</div>
+	<!-- <div class="header-search text-right">
+		<a href="javascript:;"></a>
+	</div> -->
+</header>
+
+<ul class="order-nav list-unstyled">
+	<li>
+		<div class="order-nav-all" ng-class="{'hover':focusIndex==0}" ng-click="isFocus(0)">全部</div>
+	</li>
+	<li>
+		<div class="order-nav-unfinished" ng-class="{'hover':focusIndex==1}" ng-click="isFocus(1)">未完成</div>
+	</li>
+	<li>
+		<div class="order-nav-finish" ng-class="{'hover':focusIndex==2}" ng-click="isFocus(2)">完成</div>
+	</li>
+</ul>
+
+	
+<div class="fruit-item my_order" ng-repeat="item in orderItem">
+	<div class="section-head clearfix">
+		<p class="pull-left">订单号：<span ng-bind="item.orderNum">123456789</span> <br><span ng-bind="item.orderTime">2017-09-10</span></p>
+		<span class="pull-right send" ng-bind="item.orderState">已发货</span>
+	</div>
+	<div class="secton-body">
+		<a href="#/prd_detail">
+			<div class="fruit-img pull-left">
+				<img class="img-responsive" ng-src="{{item.orderImg}}" alt="">
+			</div>
+		</a>
+		<div class="fruit-info">
+			<p ng-bind="item.orderInfo">大沙河猕猴桃、水果批发包邮</p>
+			<p ng-bind="item.orderReason">新鲜特价</p>
+			<p class="text-right">x <span ng-bind="item.orderCount">1</span>&nbsp;&nbsp;</p>
+		</div>
+	</div>
+	<div class="section-foot clearfix">
+		<div class="order-price pull-left">
+			合计：<span>{{ item.orderCount* item.orderOnePrice | currency : '￥' }}</span>
+		</div>
+		<ul class="pull-right list-unstyled" ng-bind-html="item.orderBtn"></ul>
+	</div>
+</div>
+
+<p class="reminder text-center">亲，已经到底了哦</p>

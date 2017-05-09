@@ -1,0 +1,61 @@
+{
+  "error_code": 0,
+  "reason": "Success",
+  "result":{
+    "allFruitTree":[
+    	{	
+    		"fruitRece":"20kg",
+    		"fruitTime":"2017-09-10",
+    		"fruitTreeImg":"img/images/product_03.png",
+    		"fruitTreeNum":"001234",
+    		"fruitBreed":"皇冠梨树",
+    		"fruitLocation":"新疆合作社"
+    	},
+    	{	
+
+    		"fruitRece":"20kg",
+    		"fruitTime":"2017-09-10",
+    		"fruitTreeImg":"img/images/product_05.png",
+    		"fruitTreeNum":"002345",
+    		"fruitBreed":"葡萄藤",
+    		"fruitLocation":"北京合作社"
+    	},
+    	{	
+
+    		"fruitRece":"20kg",
+    		"fruitTime":"2017-09-10",
+    		"fruitTreeImg":"img/images/product_09.png",
+    		"fruitTreeNum":"003456",
+    		"fruitBreed":"樱桃树",
+    		"fruitLocation":"四川合作社"
+    	},
+    	{	
+
+    		"fruitRece":"20kg",
+    		"fruitTime":"2017-09-10",
+    		"fruitTreeImg":"img/images/product_10.png",
+    		"fruitTreeNum":"004567",
+    		"fruitBreed":"新疆苹果树",
+    		"fruitLocation":"新疆合作社"
+    	},
+    	{	
+
+    		"fruitRece":"20kg",
+    		"fruitTime":"2017-09-10",
+    		"fruitTreeImg":"img/images/product_03.png",
+    		"fruitTreeNum":"005678",
+    		"fruitBreed":"巨峰葡萄藤",
+    		"fruitLocation":"新疆合作社"
+    	},
+    	{	
+
+    		"fruitRece":"20kg",
+    		"fruitTime":"2017-09-10",
+    		"fruitTreeImg":"img/images/product_05.png",
+    		"fruitTreeNum":"006789",
+    		"fruitBreed":"甘肃苹果树",
+    		"fruitLocation":"甘肃合作社"
+    	}
+    ]
+  }
+}

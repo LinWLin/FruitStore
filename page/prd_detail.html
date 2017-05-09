@@ -1,0 +1,93 @@
+<header class="header clearfix" id="detail">
+	<div class="header-back-btn text-left">
+		<a onClick="javascript:history.back(-1);"></a>
+	</div>
+	<div class="header-text text-center"></div>
+	<!-- <div class="header-search text-right">
+		<a href="javascript:;"></a>
+	</div> -->
+</header>
+
+<div class="detailImg">
+	<carousel interval="myInterval" no-wrap="noWrapSlides">  
+	    <slide ng-repeat="slide in slides" active="slide.active">  
+	        <img ng-src="{{slide.image}}" style="margin:auto;">
+	    </slide>  
+	</carousel>
+</div>
+
+<div class="detail-info">
+	<h5>大沙河芒果、水果10斤批发 包邮 新鲜特价 一整箱现摘冰糖心红富士</h5>
+	<p class="price">￥56.00</p>
+	<div class="clearfix">
+		<p>销量：<span>555</span></p>
+		<p>库存：<span>999</span></p>
+	</div>
+</div>
+
+
+<a class="center-menu" href="javascript:;" ng-click="showChoose()">
+	<div class="menu-content pull-left"> 已选：<span>1</span>份</div>
+	<div class="menu-detall pull-right">
+		<span class="right-icon"></span>
+	</div>
+</a>
+
+<div class="prd-serve">
+	<div>服务：由纳趣农业认证合作社提供产品</div>
+	<div class="serve-trait">
+		<span>直采直销</span>
+		<span>绿色安全</span>
+		<span>质量保证</span>
+	</div>
+</div>
+
+
+<a class="center-menu" href="#/commodity_details">
+	<div class="menu-content pull-left"> 查看商品详情</div>
+	<div class="menu-detall pull-right">
+		<span class="right-icon"></span>
+	</div>
+</a>
+
+<a class="center-menu" href="javascript:;">
+	<div class="menu-content pull-left"> 用户评价，好评率100%</div>
+	<div class="menu-detall pull-right">
+		<span class="right-icon"></span>
+	</div>
+</a>
+
+<div ng-class="{'prd-choose':true,'prd-choose-show':isShow}">
+	<section class="section">
+		<span id="delete-btn" ng-click="hideChoose()"></span>
+		<div class="fruit-item">
+			<div class="secton-body">
+				<div class="fruit-img pull-left">
+					<img class="img-responsive" src="img/images/product_13.png" alt="">
+				</div>
+				<div class="fruit-info fruit_detail">
+					<p class="prd-title">大沙河苹果水果10斤批发包邮新鲜特价一整箱低现摘冰糖心丑红富士</p>
+					<p class="prd-price">
+					<strong>￥56.00</strong>
+					<span>库存：9999</span></p>
+				</div>
+			</div>
+			<div class="item-num">
+				<p>数量：</p>
+				<a href="javascript:;">-</a>
+				<span>1</span>
+				<a href="javascript:;">+</a>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="pay-nav clearfix">
+	<div class="pay-btn">
+		<a href="javascript:;">加入购物车</a>
+	</div>
+	<div class="pay-btn">
+		<a class="blue" href="#/buy_now">立即购买</a>
+	</div>
+</div>
+<div style="height: 50px;"></div>

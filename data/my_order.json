@@ -1,0 +1,56 @@
+{
+  "error_code": 0,
+  "reason": "Success",
+  "result":{
+    "orderList":[
+    	{	
+            "orderTime":"2017-02-01",
+            "orderNum":"123456789",
+            "orderState":"未发货",
+            "orderImg":"img/images/product_17.png",
+            "orderInfo":"大沙河枣子、水果批发包邮",
+            "orderReason":"新鲜特价",
+            "orderCount":"1",
+            "orderOnePrice":"29",
+            "orderPrice":"",
+            "orderBtn":"<li class='search-detaill'><a href='#/my_fruit_detail'>查看详情</a></li>"
+    	},
+        {   
+            "orderTime":"2017-02-01",
+            "orderNum":"123456789",
+            "orderState":"已发货",
+            "orderImg":"img/images/product_13.png",
+            "orderInfo":"大沙河枣子、水果批发包邮",
+            "orderReason":"新鲜特价",
+            "orderCount":"1",
+            "orderOnePrice":"29",
+            "orderPrice":"",
+            "orderBtn":"<li class='search-detaill'><a href='javascript:;'>查看详情</a></li><li class='verify'><a href='javascript:;'>确认收货</a></li>"
+        },
+        {   
+            "orderTime":"2017-02-01",
+            "orderNum":"123456789",
+            "orderState":"待付款",
+            "orderImg":"img/images/product_14.png",
+            "orderInfo":"大沙河枣子、水果批发包邮",
+            "orderReason":"新鲜特价",
+            "orderCount":"1",
+            "orderOnePrice":"29",
+            "orderPrice":"",
+            "orderBtn":"<li class='search-detaill'><a href='javascript:;'>查看详情</a></li><li class='verify'><a href='javascript:;'>去支付</a></li>"
+        },
+        {   
+            "orderTime":"2017-02-01",
+            "orderNum":"123456789",
+            "orderState":"已完成",
+            "orderImg":"img/images/product_18.png",
+            "orderInfo":"大沙河枣子、水果批发包邮",
+            "orderReason":"新鲜特价",
+            "orderCount":"1",
+            "orderOnePrice":"29",
+            "orderPrice":"",
+            "orderBtn":"<li class='search-detaill'><a href='javascript:;'>查看详情</a></li><li class='verify'><a href='javascript:;'>去评价</a></li>"
+        }
+    ]
+  }
+}

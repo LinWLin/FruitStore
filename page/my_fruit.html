@@ -1,0 +1,84 @@
+<header class="header clearfix">
+	<div class="header-back-btn text-left">
+		<a onClick="javascript:history.back(-1);"></a>
+	</div>
+	<div class="header-text text-center">我的果园</div>
+	<!-- <div class="header-search text-right">
+		<a href="javascript:;"></a>
+	</div> -->
+</header>
+
+
+<section class="section">
+	
+	<div class="fruit-item" ng-repeat="item in fruitItem">
+		<div class="section-head clearfix">
+			<strong class="pull-left" ng-bind="item.fruitLocation"></strong>
+			<span class="pull-right" ng-bind="item.fruitTime"></span>
+		</div>
+		<div class="secton-body">
+				<a href="#/my_fruit_detail">
+			<div class="fruit-img pull-left">
+					<img class="img-responsive" ng-src="{{item.fruitTreeImg}}" alt="">
+			</div>
+				</a>
+			<div class="fruit-info">
+				<h4>果树编号：<span ng-bind="item.fruitTreeNum"></span></h4>
+				<p>品种：<span ng-bind="item.fruitBreed"></span></p>
+				<p>剩余可收获果实：<span ng-bind="item.fruitRece"></span></p>
+				
+				<div class="tree-state">
+					<a href="javascript:;"><span class="grow_up"></span> 成长状态</a>
+					<a href="javascript:;"><span class="fitness"></span> 健康状态</a>
+				</div>
+			</div>
+		</div>
+		<div class="section-foot clearfix">
+			<ul class="pull-right list-unstyled">
+				<li><a href="#/give_away">转增</a></li>
+				<li><a href="#/renew">续费</a></li>
+				<li><a href="#/verify_harvest">收获</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+
+<p class="reminder text-center">亲，已经到底了哦</p>
+
+<div style="height: 51px;"></div>
+
+<!-- 底部公共导航 -->
+<nav class="footer-nav">
+	<ul class="list-unstyled clearfix">
+		<li>
+			<a href="#/farm_index" title="首页">
+				<div class="nav-icon home"></div>
+				<div class="nav-name">首页</div>
+			</a>
+		</li>
+		<li class="active">
+			<a href="#/my_fruit" title="我的果园">
+				<div class="nav-icon myfruit"></div>
+				<div class="nav-name">我的果园</div>
+			</a>
+		</li>
+		<li>
+			<a href="#/shopping_cart" title="购物车">
+				<div class="nav-icon gwc"></div>
+				<div class="nav-name">购物车</div>
+			</a>
+		</li>
+		<li>
+			<a href="#/my_center" title="个人中心">
+				<div class="nav-icon mycenter"></div>
+				<div class="nav-name">个人中心</div>
+			</a>
+		</li>
+	</ul>
+</nav>

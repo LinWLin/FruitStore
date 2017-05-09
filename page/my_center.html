@@ -1,0 +1,117 @@
+<header class="header clearfix">
+	<div class="header-back-btn text-left">
+		<a onClick="javascript:history.back(-1);"></a>
+	</div>
+	<div class="header-text text-center">个人中心</div>
+	<div class="header-set text-right">
+		<a href="#/my_center_set">设置</a>
+	</div>
+</header>
+
+<div class="center-hd">
+	<div class="center-mask">
+		<div class="center-user">
+			<div class="user-img"></div>
+			<div class="user-name">诸葛瑾</div>
+		</div>
+	</div>
+</div>
+
+<a class="center-menu" href="#/my_order">
+	<div class="menu-content pull-left">我的订单</div>
+	<div class="menu-detall pull-right">
+		<span>查看全部</span>
+		<span class="right-icon"></span>
+	</div>
+</a>
+
+<ul class="order-nav list-unstyled">
+	<li>
+		<div class="order-nav-all" ng-class="{'hover':focusIndex==0}" ng-click="isFocus(0)">
+			<i></i>
+			全部
+		</div>
+	</li>
+	<li>
+		<div class="order-nav-unfinished" ng-class="{'hover':focusIndex==1}" ng-click="isFocus(1)">
+			<i></i>
+			未完成
+		</div>
+	</li>
+	<li>
+		<div class="order-nav-finish" ng-class="{'hover':focusIndex==2}" ng-click="isFocus(2)">
+			<i></i>
+			完成
+		</div>
+	</li>
+</ul>
+
+<a class="center-menu" href="#/balances">
+	<div class="menu-content pull-left">我的余额</div>
+	<div class="menu-detall pull-right">
+		<span>￥5000.00</span>
+		<span class="right-icon"></span>
+	</div>
+</a>
+
+<a class="center-menu" href="#/my_coupon">
+	<div class="menu-content pull-left">我的优惠劵</div>
+	<div class="menu-detall pull-right">
+		<span class="right-icon"></span>
+	</div>
+</a>
+
+<a class="center-menu" href="#/trace">
+	<div class="menu-content pull-left">收货追踪</div>
+	<div class="menu-detall pull-right">
+		<span class="right-icon"></span>
+	</div>
+</a>
+
+<a class="center-menu" href="javascript:;">
+	<div class="menu-content pull-left">客服</div>
+	<div class="menu-detall pull-right">
+		<span class="right-icon"></span>
+	</div>
+</a>
+
+<a class="center-menu" href="#/about_us">
+	<div class="menu-content pull-left">关于</div>
+	<div class="menu-detall pull-right">
+		<span class="right-icon"></span>
+	</div>
+</a>
+
+
+<div style="height: 51px;"></div>
+
+
+<!-- 底部公共导航 -->
+<nav class="footer-nav">
+	<ul class="list-unstyled clearfix">
+		<li>
+			<a href="#/farm_index" title="首页">
+				<div class="nav-icon home"></div>
+				<div class="nav-name">首页</div>
+			</a>
+		</li>
+		<li>
+			<a href="#/my_fruit" title="我的果园">
+				<div class="nav-icon myfruit"></div>
+				<div class="nav-name">我的果园</div>
+			</a>
+		</li>
+		<li>
+			<a href="#/shopping_cart" title="购物车">
+				<div class="nav-icon gwc"></div>
+				<div class="nav-name">购物车</div>
+			</a>
+		</li>
+		<li class="active">
+			<a href="#/my_center" title="个人中心">
+				<div class="nav-icon mycenter"></div>
+				<div class="nav-name">个人中心</div>
+			</a>
+		</li>
+	</ul>
+</nav>

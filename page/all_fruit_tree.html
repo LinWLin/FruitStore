@@ -1,0 +1,80 @@
+
+<header class="header clearfix">
+	<div class="header-back-btn text-left">
+		<a onClick="javascript:history.back(-1);"></a>
+	</div>
+	<div class="header-text text-center">所有果树</div>
+	<div class="header-search text-right">
+		<a href="javascript:;" ng-click="showSearch()"></a>
+	</div>
+</header>
+
+
+<div ng-class="{'search-box':true,'showBox':isShow}">
+	<form action="1.php">
+		<input type="text">
+		<input type="submit" value="搜索">
+	</form>
+</div>
+
+<nav class="header-screen">
+	<ul class="list-unstyled clearfix">
+		<li>
+			<a href="javascript:;" ng-class="{'hover':focusIndex==0}" ng-click="isFocus(0)">综合</a>
+		</li>
+		<li>
+			<a href="javascript:;" ng-class="{'hover':focusIndex==1}" ng-click="isFocus(1)">新品</a>
+		</li>
+		<li>
+			<a href="javascript:;" ng-class="{'hover':focusIndex==2}" ng-click="isFocus(2)">销量</a>
+		</li>
+		<li>
+			<a href="javascript:;" ng-class="{'hover':focusIndex==3}" ng-click="isFocus(3)">价格</a>
+		</li>
+		<li>
+			<a href="javascript:;" ng-class="{'hover':focusIndex==4}" ng-click="isFocus(4)">分类</a>
+		</li>
+	</ul>
+</nav>
+
+<div class="classify">
+	<ul class="list-unstyled clearfix">
+		<li><a href="javascript:;">全部</a></li>
+		<li><a href="javascript:;">苹果</a></li>
+		<li><a href="javascript:;">樱桃</a></li>
+		<li><a href="javascript:;">葡萄</a></li>
+		<li><a href="javascript:;">香蕉</a></li>
+		<li><a href="javascript:;">菠萝</a></li>
+		<li><a href="javascript:;">橘子</a></li>
+		<li><a href="javascript:;">柚子</a></li>
+		<li><a href="javascript:;">樱桃</a></li>
+		<li><a href="javascript:;">葡萄</a></li>
+		<li><a href="javascript:;">香蕉</a></li>
+		<li><a href="javascript:;">菠萝</a></li>
+	</ul>
+</div>
+
+<section class="section">
+	<div class="fruit-item" ng-repeat="item in fruitItem">
+		<div class="fruit-img pull-left">
+			<img class="img-responsive" ng-src="{{item.fruitTreeImg}}" alt="">
+		</div>
+		<div class="fruit-info">
+			<h4>果树编号：<span ng-bind="item.fruitTreeNum"></span></h4>
+			<p>品种：<span ng-bind="item.fruitBreed"></span></p>
+			<p>所属合作社：<span ng-bind="item.fruitLocation"></span></p>
+			
+			<div class="tree-state">
+				<a href="javascript:;"><span class="grow_up"></span> 成长状态</a>
+				<a href="javascript:;"><span class="fitness"></span> 健康状态</a>
+			</div>
+		</div>
+	</div>
+</section><!-- 
+<p class="reminder text-center">亲，已经到底了哦</p>
+
+
+<div style="height: 51px;"></div>
+
+
+<div ng-include="'page/include/footer_nav.html'"></div> -->

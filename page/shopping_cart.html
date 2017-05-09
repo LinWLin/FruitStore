@@ -1,0 +1,67 @@
+<header class="header clearfix">
+	<div class="header-back-btn text-left">
+		<a onClick="javascript:history.back(-1);"></a>
+	</div>
+	<div class="header-text text-center">购物车</div>
+	<!-- <div class="header-search text-right">
+		<a href="javascript:;"></a>
+	</div> -->
+</header>
+
+<section class="section prd_cart">
+	<div class="fruit-item" ng-repeat="item in prdItem">
+		<div class="selected pull-left">
+			<a href="javascript:;" ng-class="{true:'checked',false:''}[isChecked=item.fruitBol]" one-check items="{{item.fruitItem}}"></a>
+		</div>
+		<div class="fruit-img pull-left">
+			<img class="img-responsive" ng-src="{{item.fruitTreeImg}}" alt="">
+		</div>
+		<div class="fruit-info">
+			<h4 ng-bind="item.fruitInfo"></h4>
+			<h4 ng-bind="item.fruitState"></h4>
+			<p class="price"><span ng-bind="item.fruitPrice | currency : '￥'"></p></户>
+			
+			<div class="prd-number">
+				<a href="javascript:;" items="{{item.fruitItem}}" my-minus>-</a>
+				<span ng-bind="item.fruitNum"></span>
+				<a href="javascript:;" items="{{item.fruitItem}}" my-adds>+</a>
+				<a href="javascript:;" class="delelt pull-right" ng-click="show()">
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="mask">
+	<div class="model">
+	    <div class="model-tips">确认删除这个宝贝？</div>
+	    <div class="model-btn">
+	        <button ng-click="hide()">否</button>
+	        <button class="btn-yes" ng-click="remove()">是</button>
+	    </div>
+	</div>
+</div>
+
+ 
+<p class="reminder text-center">亲，已经到底了哦</p>
+
+
+<div style="height: 51px;"></div>
+
+
+<nav class="accounts">
+	<div class="all_check pull-left">
+		<a ng-class="{checked:checkAll}" href="javascript:;" all-orcan>
+			<span>全选</span>
+		</a>
+	</div>
+	<div class="total pull-left">
+		合计：
+		<span>{{allPrices() | currency : '￥'}}</span>
+	</div>
+	<a class="accounts-btn pull-right" href="#/buy_now">
+		结算
+	</a>
+</nav>
+
+<!-- <div ng-include="'page/include/footer_nav.html'"></div> -->

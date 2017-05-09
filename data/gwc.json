@@ -1,0 +1,28 @@
+{
+  "error_code": 0,
+  "reason": "Success",
+  "result":{
+    "productList":[
+    	{	
+            "fruitBol":false,
+            "fruitNum":"1",
+            "fruitItem":"1",
+            "fruitTreeImg":"img/images/product_14.png",
+            "fruitInfo":"大沙河枣子、水果批发包邮",
+            "fruitState":"新鲜特价",
+            "fruitOnePrice":"29",
+            "fruitPrice":""
+    	},
+    	{	
+            "fruitBol":false,
+            "fruitNum":"1",
+            "fruitItem":"2",
+    		"fruitTreeImg":"img/images/product_18.png",
+            "fruitInfo":"大沙河枣子、水果批发包邮",
+            "fruitState":"新鲜特价",
+            "fruitOnePrice":"29",
+            "fruitPrice":""
+    	}
+    ]
+  }
+}
