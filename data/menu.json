@@ -56,28 +56,28 @@
     ],
     "recomTree":[
         {
-          "recomTreeImg":"img/images/product_03.png",
+          "recomTreeImg":"img/images/exper3.png",
           "recomTreeName":"皇冠梨树",
           "recomTreeNum":"123456",
           "recomTreePrice":"56",
           "recomTreeLink":""
         },
         {
-          "recomTreeImg":"img/images/product_05.png",
+          "recomTreeImg":"img/images/exper3.png",
           "recomTreeName":"甘肃苹果树",
           "recomTreeNum":"123456",
           "recomTreePrice":"56",
           "recomTreeLink":""
         },
         {
-          "recomTreeImg":"img/images/product_09.png",
+          "recomTreeImg":"img/images/exper3.png",
           "recomTreeName":"巨峰葡萄藤",
           "recomTreeNum":"123456",
           "recomTreePrice":"56",
           "recomTreeLink":""
         },
         {
-          "recomTreeImg":"img/images/product_10.png",
+          "recomTreeImg":"img/images/exper3.png",
           "recomTreeName":"樱桃树苗",
           "recomTreeNum":"123456",
           "recomTreePrice":"56",
@@ -86,22 +86,22 @@
     ],
     "hotFruit":[
         {
-          "hotFruitImg":"img/images/product_13.png",
+          "hotFruitImg":"img/images/exper3.png",
           "hotFruitName":"新鲜采摘的苹果",
           "hotFruitPrice":"25"
         },
         {
-          "hotFruitImg":"img/images/product_14.png",
+          "hotFruitImg":"img/images/exper3.png",
           "hotFruitName":"新鲜采摘的青芒",
           "hotFruitPrice":"25"
         },
         {
-          "hotFruitImg":"img/images/product_17.png",
+          "hotFruitImg":"img/images/exper3.png",
           "hotFruitName":"新鲜采摘的猕猴桃",
           "hotFruitPrice":"25"
         },
         {
-          "hotFruitImg":"img/images/product_18.png",
+          "hotFruitImg":"img/images/exper3.png",
           "hotFruitName":"新鲜采摘的香橙",
           "hotFruitPrice":"25"
         }

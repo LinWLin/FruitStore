@@ -422,10 +422,10 @@ angular.module("app",["ng","ui.bootstrap","ngRoute","ngAnimate","ngSanitize"])
 		$scope.myInterval = 5000;  //轮播时长
 	    $scope.noWrapSlides = false;  //
 	    var slides = $scope.slides = [
-	    	{ image: 'img/images/product_13.png' },
-	    	{ image: 'img/images/product_14.png' },
-	    	{ image: 'img/images/product_17.png' },
-	    	{ image: 'img/images/product_18.png' }
+	    	{ image: 'img/images/exper3.png' },
+	    	{ image: 'img/images/exper3.png' },
+	    	{ image: 'img/images/exper3.png' },
+	    	{ image: 'img/images/exper3.png' }
 	    ];  
 	    var newWidth = 600 + slides.length + 1; 
 
@@ -469,10 +469,22 @@ angular.module("app",["ng","ui.bootstrap","ngRoute","ngAnimate","ngSanitize"])
 
 
 	//收获地址
-	.controller('setAddressCtrl',function($scope,$location){
+	.controller('setAddressCtrl',function($scope,$location,$http){
+
+		$http.get("data/setAddr.json").then(function(response){
+		 	$scope.addrItem=response.data.result.addrList;
+		 })
+
+		
+
+		// $scope.clickMe=true;
 		$scope.toAddr = function (){
 			$location.path('/addAddress');
 		}
+
+		$scope.remove=function(index){  
+            $scope.addrItem.splice(index,1); 
+        }; 
 	})
 
 
@@ -483,6 +495,7 @@ angular.module("app",["ng","ui.bootstrap","ngRoute","ngAnimate","ngSanitize"])
 
 			$scope.data = response.data;
 		})
+
 
 
 
@@ -499,7 +512,7 @@ angular.module("app",["ng","ui.bootstrap","ngRoute","ngAnimate","ngSanitize"])
 			}
 		}
 
-
+		
 
 	})
 

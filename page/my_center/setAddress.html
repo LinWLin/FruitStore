@@ -9,58 +9,54 @@
 </header>
 
 <ul class="add-list list-unstyled ng-scope">
-	<li>
-        <div class="clearfix">
-        	<span class="pull-left">汪林</span>
-        	<p class="pull-right">183****7585</p>
-        </div>
-        <div class="addr_txt">浙江省杭州市江干区</div>
-        <div class="addr_txt2">红普路汇禾禧福汇电子商务园4栋513</div>
-        <div class="ico_curr" style="display: block;"></div>
-        <div class="default_addr clearfix">
-            <div class="default pull-left">
-                    <i class="icon-addr">&nbsp;</i>
-                    <span class="red">默认地址</span>
 
-            </div>
-            <div class="operate pull-right clearfix">
-                <div id="edit_addr" class="edit pull-left">
-                	<i class="icon_edit">&nbsp;</i>
-                	<span>编辑</span>
-                </div>
-                <div id="del_addr" class="del pull-right">
-                	<i class="icon_del">&nbsp;</i>
-                	<span>删除</span>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
+	<li ng-repeat="addr in addrItem"> 
         <div class="clearfix">
-        	<span class="pull-left">汪林</span>
-        	<p class="pull-right">183****7585</p>
+        	<span class="pull-left" ng-bind="addr.userName"></span>
+        	<p class="pull-right" ng-bind="addr.userPhone"></p>
         </div>
-        <div class="addr_txt">浙江省杭州市江干区</div>
-        <div class="addr_txt2">红普路汇禾禧福汇电子商务园4栋513</div>
-        <div class="ico_curr" style="display: none;"></div>
+        <div class="addr_txt" ng-bind="addr.userAddr"></div>
+        <div class="addr_txt2" ng-bind="addr.userAddrDe"></div>
+        <div class="iconCurr"></div>
         <div class="default_addr clearfix">
+
+            <!-- <div ng-hide="clickMe" ng-click="clickMe=false" class="default pull-left">
+                <i class="icon-addr">&nbsp;</i>
+                <span class="red">默认地址</span>
+            </div> -->
+
             <div class="setDefault pull-left">
-                    <i class="icon-addr">&nbsp;</i>
-                    <span>设为默认</span>
+               <i class="icon-addr">&nbsp;</i>
+               <span>设为默认</span>
+           </div>
 
-            </div>
             <div class="operate pull-right clearfix">
-                <div id="edit_addr" class="edit pull-left">
+                <div id="edit_addr" ng-click="toAddr()" class="edit pull-left">
                 	<i class="icon_edit">&nbsp;</i>
                 	<span>编辑</span>
                 </div>
-                <div id="del_addr" class="del pull-right">
+                <div id="del_addr" ng-click="remove($index)" class="del pull-right">
                 	<i class="icon_del">&nbsp;</i>
                 	<span>删除</span>
                 </div>
             </div>
         </div>
     </li>
+
+    <script>
+        $(function(){
+            $(".add-list").delegate('li', 'click', function() {
+                $(this).addClass("iconShow ng-scope").siblings().removeClass('iconShow');
+            });
+
+            $(".add-list").delegate('.default_addr>.pull-left', 'click', function(event) {
+                event.stopPropagation();
+                $(this).removeClass('setDefault').addClass('default').find('span').addClass('red').html("默认地址");
+                    $(this).parent().parent().siblings().find('.default').removeClass('default').addClass('setDefault').find('span').removeClass('red').html("设为默认");
+            })
+        })
+    </script>
+
 </ul>
 <div class="addressBox ng-scope" ng-click="toAddr()">
 	<span></span> 添加新地址

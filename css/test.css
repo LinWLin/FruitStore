@@ -1248,6 +1248,7 @@ div.search-box form input[type="submit"] {
 .add-list li {
   padding: 10px 45px 10px 15px;
   border-top:1px solid #efefef;
+  position: relative;
 }
 .add-list li>div { line-height: 20px; }
 .add-list .addr_txt {
@@ -1286,7 +1287,7 @@ div.search-box form input[type="submit"] {
   background-position: 0 -40px;
 }
 .add-list .operate .edit { margin-right: 15px; }
-.add-list .ico_curr {
+.add-list .iconCurr {
   width: 24px;
   height: 23px;
   background: url(../img/ico_dian2.png);
@@ -1296,8 +1297,9 @@ div.search-box form input[type="submit"] {
   position: absolute;
   right: 15px;
   top: 40px;
+  display: none;
 }
-
+.add-list .iconShow .iconCurr {display: block;}
 
 .addressBox {
   position: fixed;

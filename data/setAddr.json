@@ -1,0 +1,33 @@
+{
+  "error_code": 0,
+  "reason": "Success",
+  "result":{
+    "addrList":[
+    	{	
+            "userName":"诸葛侯爷",
+            "userPhone":"19305627585",
+            "userAddr":"浙江省杭州市江干区",
+            "userAddrDe":"红普路汇禾禧福汇电子商务园4栋513"
+    	},
+      {   
+          "userName":"诸葛瑾",
+          "userPhone":"19305627585",
+          "userAddr":"浙江省杭州市江干区",
+          "userAddrDe":"红普路汇禾禧福汇电子商务园4栋513"
+      },
+      { 
+            "userName":"诸葛侯爷",
+            "userPhone":"19305627585",
+            "userAddr":"浙江省杭州市江干区",
+            "userAddrDe":"红普路汇禾禧福汇电子商务园4栋513"
+      },
+      {   
+          "userName":"诸葛瑾",
+          "userPhone":"19305627585",
+          "userAddr":"浙江省杭州市江干区",
+          "userAddrDe":"红普路汇禾禧福汇电子商务园4栋513"
+      }
+
+    ]
+  }
+}
